@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data:;" />
+  <title>Rubox Shop — Premium Robux Marketplace</title>
+  <meta name="description" content="Trusted Robux shop with instant delivery, hardened front-end, and secure purchase flow." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body oncontextmenu="return false;">
+  <div class="bg-animation"></div>
+
+  <nav>
+    <div class="nav-container">
+      <a class="logo-nav" href="faisalsite.html">
+        <span class="logo-icon">R</span>
+        RUBOX
+      </a>
+      <ul class="nav-links">
+        <li><a class="active" href="faisalsite.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="offers.html">Offers</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-outline" href="auth.html#login">Login</a>
+        <a class="btn btn-primary" href="auth.html#signup">Sign Up</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="hero">
+      <p style="letter-spacing:4px;text-transform:uppercase;color:var(--text-secondary)">rubox marketplace</p>
+      <h1>Instant Robux Delivery, Backed by Zero-Trust Security</h1>
+      <p>Automated fulfillment, verified sellers, and proactive anti-leak protection keep every purchase fast and safe.</p>
+      <div class="trust-badges">
+        <div class="badge"><span class="badge-icon">✅</span>100% Safe</div>
+        <div class="badge"><span class="badge-icon">⚡</span>Instant Delivery</div>
+        <div class="badge"><span class="badge-icon">🔒</span>Secure Payments</div>
+        <div class="badge"><span class="badge-icon">🌟</span>50K+ Customers</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Featured Packages</div>
+      <div class="packages-grid" id="packagesGrid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h3>Rubox Shop</h3>
+        <p>Your trusted source for Robux worldwide.</p>
+        <div class="social-links">
+          <a href="#" class="social-link">📘</a>
+          <a href="#" class="social-link">🐦</a>
+          <a href="#" class="social-link">📷</a>
+          <a href="#" class="social-link">🎮</a>
+        </div>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul class="footer-links">
+          <li><a href="faisalsite.html">Shop</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="offers.html">Special Offers</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Support</h3>
+        <ul class="footer-links">
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="auth.html#tos">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Refund Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal-text">© Rubox Shop. All rights reserved.</div>
+  </footer>
+
+  <div id="orderModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" id="closeModal" aria-label="Close modal">×</button>
+      <h2>Complete Your Order</h2>
+      <div class="form-group">
+        <label for="robloxUsername">Roblox Username</label>
+        <input type="text" id="robloxUsername" placeholder="Enter your Roblox username" autocomplete="off" />
+      </div>
+      <div class="form-group">
+        <label for="selectedPackage">Package</label>
+        <input type="text" id="selectedPackage" readonly />
+      </div>
+      <div class="form-group">
+        <label for="packagePrice">Price</label>
+        <input type="text" id="packagePrice" readonly />
+      </div>
+      <div class="form-group">
+        <label>Payment Method</label>
+        <div class="payment-options" id="paymentOptions">
+          <label class="payment-option active">
+            <input type="radio" name="paymentOption" value="whatsapp" checked />
+            WhatsApp
+          </label>
+          <label class="payment-option">
+            <input type="radio" name="paymentOption" value="discord" />
+            Discord
+          </label>
+        </div>
+      </div>
+      <div class="payment-details" id="paymentDetails">
+        Message our WhatsApp support to pay instantly. We'll send you a secure payment request and confirm delivery within minutes.
+      </div>
+      <button class="btn-order" id="confirmOrder">Complete Order</button>
+    </div>
+  </div>
+
+  <script src="security.js" defer></script>
+  <script src="home.js" defer></script>
+</body>
+</html>
