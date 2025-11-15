@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data:;" />
+  <title>Rubox FAQ</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body oncontextmenu="return false;">
+  <div class="bg-animation"></div>
+  <nav>
+    <div class="nav-container">
+      <a class="logo-nav" href="faisalsite.html">
+        <span class="logo-icon">R</span>
+        RUBOX
+      </a>
+      <ul class="nav-links">
+        <li><a href="faisalsite.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="offers.html">Offers</a></li>
+        <li><a class="active" href="faq.html">FAQ</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-outline" href="auth.html#login">Login</a>
+        <a class="btn btn-primary" href="auth.html#signup">Sign Up</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <header class="page-header">
+      <h1>Frequently Asked Questions</h1>
+      <p>Your most common questions answered in one place.</p>
+    </header>
+
+    <section class="faq-container">
+      <article class="faq-item">
+        <div class="faq-question">
+          How fast is delivery?
+          <span class="faq-arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+          Our automated system delivers Robux within 5-15 minutes once payment is confirmed. During peak hours, delivery can take up to 60 minutes, and you will see live status updates in your order tracker.
+        </div>
+      </article>
+      <article class="faq-item">
+        <div class="faq-question">
+          Is Rubox safe?
+          <span class="faq-arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+          Yes. We never ask for your Roblox password, we rely on secure group payout methods, and we enforce TLS 1.3 + HSTS on every request.
+        </div>
+      </article>
+      <article class="faq-item">
+        <div class="faq-question">
+          What payment methods are supported?
+          <span class="faq-arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+          We accept bank transfers, PayPal, credit/debit cards, and WhatsApp payments. Regional wallets (STC Pay, Mada) are supported for KSA shoppers.
+        </div>
+      </article>
+      <article class="faq-item">
+        <div class="faq-question">
+          What if my Robux doesn't arrive?
+          <span class="faq-arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+          Contact support immediately via WhatsApp or Discord and share your order ID. We'll verify the transaction and either push delivery again or refund you—no questions asked.
+        </div>
+      </article>
+      <article class="faq-item">
+        <div class="faq-question">
+          Do you offer bulk discounts?
+          <span class="faq-arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+          Yes! Orders above 10,000 Robux qualify for tiered pricing. Reach out through the contact page for a custom quote.
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h3>Rubox Shop</h3>
+        <p>Your trusted source for Robux worldwide.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul class="footer-links">
+          <li><a href="faisalsite.html">Shop</a></li>
+          <li><a href="offers.html">Special Offers</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Support</h3>
+        <ul class="footer-links">
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="auth.html#tos">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal-text">© Rubox Shop.</div>
+  </footer>
+
+  <script src="security.js"></script>
+  <script>
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      item.querySelector('.faq-question').addEventListener('click', () => {
+        const expanded = item.classList.toggle('active');
+        if(expanded){
+          faqItems.forEach(other => {
+            if(other !== item) other.classList.remove('active');
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+

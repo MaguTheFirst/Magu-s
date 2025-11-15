@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data:;" />
+  <title>Rubox Special Offers</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body oncontextmenu="return false;">
+  <div class="bg-animation"></div>
+  <nav>
+    <div class="nav-container">
+      <a class="logo-nav" href="faisalsite.html">
+        <span class="logo-icon">R</span>
+        RUBOX
+      </a>
+      <ul class="nav-links">
+        <li><a href="faisalsite.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="active" href="offers.html">Offers</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-outline" href="auth.html#login">Login</a>
+        <a class="btn btn-primary" href="auth.html#signup">Sign Up</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <header class="page-header">
+      <h1>Limited-Time Offers</h1>
+      <p>Extra Robux, bundle discounts, and loyalty boosts updated every Friday.</p>
+    </header>
+
+    <section class="offers-banner">
+      <h2 style="font-size:2.4rem;margin-bottom:8px">🔥 Mega Sale 🔥</h2>
+      <p style="font-size:1.4rem">Get 25% OFF on every package today.</p>
+      <p style="margin-top:10px">Offer ends in:</p>
+      <div class="offer-timer">
+        <div class="timer-item">
+          <div class="timer-number" id="days">02</div>
+          <div class="timer-label">Days</div>
+        </div>
+        <div class="timer-item">
+          <div class="timer-number" id="hours">14</div>
+          <div class="timer-label">Hours</div>
+        </div>
+        <div class="timer-item">
+          <div class="timer-number" id="minutes">37</div>
+          <div class="timer-label">Minutes</div>
+        </div>
+        <div class="timer-item">
+          <div class="timer-number" id="seconds">42</div>
+          <div class="timer-label">Seconds</div>
+        </div>
+      </div>
+      <a href="faisalsite.html" class="btn btn-primary" style="margin-top:28px;display:inline-block">Shop Packages</a>
+    </section>
+
+    <section class="page-section">
+      <h2 class="section-title">Bundle Deals</h2>
+      <div class="packages-grid">
+        <article class="package-card">
+          <div class="popular-badge">BEST VALUE</div>
+          <div class="package-icon">🎁</div>
+          <h3>Starter Bundle</h3>
+          <div class="package-price">49 SAR</div>
+          <div class="package-discount">Regular: 65 SAR</div>
+          <ul class="package-features">
+            <li><span class="feature-check">✓</span> 2,000 Robux</li>
+            <li><span class="feature-check">✓</span> Bonus 200 Robux</li>
+            <li><span class="feature-check">✓</span> VIP Support</li>
+          </ul>
+        </article>
+        <article class="package-card">
+          <div class="package-icon">💎</div>
+          <h3>Premium Bundle</h3>
+          <div class="package-price">149 SAR</div>
+          <div class="package-discount">Regular: 200 SAR</div>
+          <ul class="package-features">
+            <li><span class="feature-check">✓</span> 7,500 Robux</li>
+            <li><span class="feature-check">✓</span> Bonus 1,000 Robux</li>
+            <li><span class="feature-check">✓</span> Priority Delivery</li>
+          </ul>
+        </article>
+        <article class="package-card">
+          <div class="package-icon">👑</div>
+          <h3>Ultimate Bundle</h3>
+          <div class="package-price">299 SAR</div>
+          <div class="package-discount">Regular: 400 SAR</div>
+          <ul class="package-features">
+            <li><span class="feature-check">✓</span> 15,000 Robux</li>
+            <li><span class="feature-check">✓</span> Bonus 3,000 Robux</li>
+            <li><span class="feature-check">✓</span> Lifetime VIP Status</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h3>Rubox Shop</h3>
+        <p>Your trusted source for Robux worldwide.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul class="footer-links">
+          <li><a href="faisalsite.html">Shop</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Support</h3>
+        <ul class="footer-links">
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="auth.html#tos">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal-text">© Rubox Shop.</div>
+  </footer>
+
+  <script src="security.js"></script>
+  <script>
+    let timeLeft = 2 * 24 * 60 * 60;
+    const pad = value => String(value).padStart(2,'0');
+    function updateTimer(){
+      const days = Math.floor(timeLeft / 86400);
+      const hours = Math.floor((timeLeft % 86400) / 3600);
+      const minutes = Math.floor((timeLeft % 3600) / 60);
+      const seconds = timeLeft % 60;
+      document.getElementById('days').textContent = pad(days);
+      document.getElementById('hours').textContent = pad(hours);
+      document.getElementById('minutes').textContent = pad(minutes);
+      document.getElementById('seconds').textContent = pad(seconds);
+      if(timeLeft > 0) timeLeft--;
+    }
+    setInterval(updateTimer,1000);
+  </script>
+</body>
+</html>
+
